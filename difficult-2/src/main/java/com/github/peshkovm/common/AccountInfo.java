@@ -6,9 +6,8 @@ import lombok.Data;
 
 @Data
 public class AccountInfo {
-
-  public AccountInfo(LocalDateTime date, OperationType debit, Account toAccount,
-      Double sumOfTransfer) {
-
-  }
+  private final LocalDateTime date;
+  private final OperationType debit;
+  private final Account toAccount;
+  private final Double sumOfTransfer;
 }
