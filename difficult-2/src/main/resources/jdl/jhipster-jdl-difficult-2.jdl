@@ -1,0 +1,26 @@
+
+entity Client {
+	id Integer
+}
+
+entity Account {
+	id Integer
+}
+
+entity JournalEntry {
+	id Integer,
+    fromAccount Account,
+    toAccount Account
+}
+
+relationship OneToMany {
+	Client to Account
+}
+
+relationship OneToOne {
+	JournalEntry{fromAccount} to Account
+}
+
+relationship OneToOne {
+	JournalEntry{toAccount} to Account
+}

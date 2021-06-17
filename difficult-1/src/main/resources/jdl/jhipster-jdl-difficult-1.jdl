@@ -1,0 +1,20 @@
+
+entity User {
+	id Integer
+}
+
+entity Role {
+	id Integer
+}
+
+entity Permission {
+	id Integer
+}
+
+relationship ManyToMany {
+	User to Role
+}
+
+relationship ManyToMany {
+	Role to Permission
+}
